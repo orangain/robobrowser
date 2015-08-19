@@ -38,6 +38,7 @@ class RoboState(object):
         return BeautifulSoup(
             self.response.content,
             features=self.browser.parser,
+            from_encoding=self.response.encoding,
         )
 
 
